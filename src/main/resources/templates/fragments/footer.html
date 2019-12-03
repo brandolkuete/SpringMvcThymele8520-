@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="footer">
+    <footer class="probootstrap-footer probootstrap-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="probootstrap-footer-widget">
+                        <h3  th:utext="#{footer.about.message}">A propos de moi</h3>
+                        <p  th:utext="#{footer.skill_1}">Etudiant en Master 1 Informatique Option Génie Logiciel, Université de Yaounde I</p>
+                        <p  th:utext="#{footer.skill_2}">Developpeur Java Web Mobile</p>
+                        <h3  th:utext="#{footer.join.message}">Rejoinez moi</h3>
+                        <ul class="probootstrap-footer-social">
+                            <li><a th:href="@{#}"><i class="icon-twitter"></i></a></li>
+                            <li><a th:href="@{#}"><i class="icon-github"></i></a></li>
+                            <li><a th:href="@{#}"><i class="icon-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-push-1">
+                    <div class="probootstrap-footer-widget">
+                        <h3 th:utext="#{footer.h3.text}">Liens</h3>
+                        <ul>
+                            <li><a th:href="@{/index}"  th:utext="#{header.home}">Home</a></li>
+                            <li><a th:href="@{/save/enregistrerEmploye}"  th:utext="#{header.save}">Enregister</a></li>
+                            <li><a th:href="@{/liste/listeEmploye}"  th:utext="#{header.list}">Liste</a></li>
+                            <li><a th:href="@{#}"  th:utext="#{header.contact}">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="probootstrap-footer-widget">
+                        <h3  th:utext="#{footer.h3.title}">Contactez moi</h3>
+                        <ul class="probootstrap-contact-info">
+                            <li><i class="icon-location2"></i> <span>Yaoundé, Cameroun</span></li>
+                            <li><i class="icon-mail"></i><span>brandolkuete@yahoo.fr</span></li>
+                            <li><i class="icon-phone2"></i><span>+237 691469475</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- END row -->
+
+        </div>
+
+        <div class="probootstrap-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 text-left">
+                        <p>&copy; 2019. All Rights Reserved. Designed &amp; Developed with <i class="icon icon-heart"></i> by Brandol Kuete</p>
+                    </div>
+                    <div class="col-md-4 probootstrap-back-to-top">
+                        <p><a th:href="@{#}" class="js-backtotop">Back to top <i class="icon-arrow-long-up"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</th:block>
+
+</html>

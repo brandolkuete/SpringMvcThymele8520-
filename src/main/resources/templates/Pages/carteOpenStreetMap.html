@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Catre</title>
+
+    <link rel="stylesheet" th:href="@{/css/leaflet.css}"  />
+    <script th:src="@{/js/leaflet.js}"></script>
+
+</head>
+<body>
+    <div id="maCarte" style="height: 200px;">
+
+    </div>
+
+    <script>
+        var maCarte = L.map('maCarte').setView([48.53, 2.14], 10);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: ' <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(maCarte);
+    </script>
+</body>
+</html>

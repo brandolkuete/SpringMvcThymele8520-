@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" class="no-js">
+
+<head>
+
+  <th:block th:replace="fragments/meta :: meta"></th:block>
+
+  <th:block th:replace="fragments/css :: css"></th:block>
+
+</head>
+
+<body>
+
+    <!-- Start Welcome area -->
+	<div class="probootstrap-page-wrapper">
+		<!-- Start Header -->
+	    <th:block th:replace="fragments/header :: header"></th:block>
+	    <!-- End Header --> 
+	    <!-- Start Main Content -->
+	    <th:block th:replace="${view} :: content"></th:block> 
+	    <!-- End Main Content -->
+	    <!-- Start Footer -->
+        <th:block th:replace="fragments/footer :: footer"></th:block>
+        <!-- End of Footer -->
+    </div>
+    <!-- End Welcome area -->
+    <th:block th:replace="fragments/js :: js"></th:block>
+
+</body>
+
+</html>
